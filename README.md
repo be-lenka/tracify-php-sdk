@@ -1,4 +1,4 @@
-# BeLenka
+# Tracify.dev PHP SDK
 
 This API allows you to send events to Tracify that originate from
 your server.
