@@ -43,13 +43,13 @@ class IdentityClassification
     /**
      * Possible values of this enum
      */
-    public const NUMBER_1 = 1;
+    public const EMAIL = 1;
 
-    public const NUMBER_2 = 2;
+    public const SESSION_ID = 2;
 
-    public const NUMBER_3 = 3;
+    public const IP_ADDRESS = 3;
 
-    public const NUMBER_4 = 4;
+    public const USER_AGENT = 4;
 
     /**
      * Gets allowable values of the enum
@@ -58,10 +58,10 @@ class IdentityClassification
     public static function getAllowableEnumValues()
     {
         return [
-            self::NUMBER_1,
-            self::NUMBER_2,
-            self::NUMBER_3,
-            self::NUMBER_4
+            static::EMAIL,
+            static::SESSION_ID,
+            static::IP_ADDRESS,
+            static::USER_AGENT
         ];
     }
 }
