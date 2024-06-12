@@ -645,6 +645,19 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
+
+    /**
+     * Get the hashed value of the identity value.
+     *
+     * @return string
+     */
+    public static function hashValue($dt) 
+    {
+        $digest = hash('sha256', $dt, false);
+        $group = substr($digest, 0, strlen($digest) - 5);
+        return hash('sha256', $group, false);
+    }
+    
 }
 
 
