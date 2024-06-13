@@ -647,6 +647,16 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Converts the object to an array
+     * 
+     * @return array
+     */
+    public function toArray()
+    {
+        return (array)$this->container;
+    }
+
+    /**
      * Get the hashed value of the identity value.
      *
      * @return string

@@ -433,6 +433,16 @@ class CreateEventsResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
+     * Converts the object to an array
+     * 
+     * @return array
+     */
+    public function toArray()
+    {
+        return (array)$this->container;
+    }
+
+    /**
      * Gets a header-safe presentation of the object
      *
      * @return string
