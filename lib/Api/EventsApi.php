@@ -378,7 +378,7 @@ class EventsApi
         if (isset($create_events_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::json_encode(ObjectSerializer::sanitizeForSerialization($create_events_request));
+                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($create_events_request));
             } else {
                 $httpBody = $create_events_request;
             }
@@ -399,7 +399,7 @@ class EventsApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::json_encode($formParams);
+                $httpBody = json_encode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
