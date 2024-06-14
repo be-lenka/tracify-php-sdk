@@ -15,6 +15,12 @@ Should also work with PHP 8.0.
 To install the bindings via [Composer](https://getcomposer.org/), add the following to `composer.json`:
 
 ```json
+composer require be-lenka/tracify-php-sdk
+```
+
+or
+
+```json
 {
   "repositories": [
     {
